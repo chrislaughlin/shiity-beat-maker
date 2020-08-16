@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import DEFAULT_BEATS from "./defaultBeats";
+import Beats from "./beats";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [beats, setBeats] = useState(DEFAULT_BEATS);
+    const [playing, setPlaying] = useState(false);
+
+    const changeBeat = (l, b, currValue) => {
+        setBeats(currentBeats => {
+            return currentBeats.map((line, lineIndex) => {
+                return line.map((beat, beatIndex) => {
+                    if (l === lineIndex && b === beatIndex) {
+                        return currValue === '-' ? 'X' : '-';
+                    } else {
+                        return beat;
+                    }
+                })
+            })
+        })
+    }
+
+    return (
+        <div className="App">
+            <h1>
+                Shity Beat Maker
+            </h1>
+            <section>
+                <Beats
+                    beats={beats}
+                    changeBeat={changeBeat}
+                />
+                <button className="play-button">
+                    {playing ? 'STOP' : 'PLAY'}
+                </button>
+            </section>
+        </div>
+    );
 }
 
 export default App;

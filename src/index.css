@@ -5,9 +5,61 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #414141;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+#root {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  color: #e7e3dc;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.play-button {
+  height: 50px;
+  width: 100px;
+  border-radius: 15px;
+  border: 3px solid green;
+  background: #00800063;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+
+.beats {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.line {
+  display: flex;
+}
+
+.beat {
+  width: 40px;
+  height: 30px;
+  background: #e7e3dc;
+  margin: 10px 20px 10px 20px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 24px;
+  cursor: pointer;
 }
