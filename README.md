@@ -12,4 +12,4 @@ Beat maker built with react and audio API
 - Open [http://localhost:3000](http://localhost:3000) to view it in the browser. 
 
 
-![Screenshot](https://github.com/chrislaughlin/stories-noone-wanted/blob/main/demo.gif?raw=true)
+![Screenshot](https://github.com/chrislaughlin/shiity-beat-maker/blob/master/Screenshot%202021-01-23%20at%2011.55.12.png?raw=true)
